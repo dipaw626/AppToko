@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 23, 2023 at 12:12 PM
+-- Generation Time: Jan 23, 2023 at 04:26 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -68,10 +68,10 @@ CREATE TABLE `item_transaksi` (
 --
 
 INSERT INTO `item_transaksi` (`id`, `transaksi_id`, `produk_id`, `qty`, `harga_saat_transaksi`, `sub_total`) VALUES
-(1, 1, 1, 1, 1500, 1500),
-(2, 2, 1, 1, 1500, 1500),
-(3, 3, 1, 1, 1500, 1500),
-(4, 4, 1, 1, 1500, 1500);
+(10, 9, 2, 2, 15000, 30000),
+(11, 9, 2, 2, 15000, 30000),
+(12, 10, 2, 2, 15000, 30000),
+(13, 10, 1, 5, 2000, 10000);
 
 -- --------------------------------------------------------
 
@@ -94,8 +94,8 @@ CREATE TABLE `produk` (
 --
 
 INSERT INTO `produk` (`id`, `admin_id`, `nama`, `harga`, `stok`, `stokjual`, `status`) VALUES
-(1, 72, 'gorengan', 2000, 3, 3, 1),
-(2, 72, 'pisang', 15000, 70, 50, 0);
+(1, 72, 'gorengan', 2000, 0, 0, 1),
+(2, 72, 'pisang', 15000, 70, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -115,10 +115,8 @@ CREATE TABLE `transaksi` (
 --
 
 INSERT INTO `transaksi` (`id`, `admin_id`, `tanggal`, `total`) VALUES
-(1, 72, '2023-01-23 11:56:00', 1500),
-(2, 72, '2023-01-23 12:03:59', 1500),
-(3, 72, '2023-01-23 12:05:47', 1500),
-(4, 72, '2023-01-23 12:06:50', 1500);
+(9, 72, '2023-01-23 16:00:20', 30000),
+(10, 72, '2023-01-23 16:08:21', 40000);
 
 --
 -- Indexes for dumped tables
@@ -166,7 +164,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `item_transaksi`
 --
 ALTER TABLE `item_transaksi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `produk`
@@ -178,7 +176,7 @@ ALTER TABLE `produk`
 -- AUTO_INCREMENT for table `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Constraints for dumped tables
