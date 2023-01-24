@@ -92,7 +92,7 @@ class ProdukBeliFormFragment : Fragment() {
                             Toast.LENGTH_LONG
                         ).show()
 
-                        findNavController().navigate(R.id.produkFragment)
+                        findNavController().navigate(R.id.pembelianFragment)
                     }
 
                     override fun onFailure(call: Call<ProdukResponsePost>, t: Throwable) {

@@ -65,7 +65,7 @@ class BeliFragment : Fragment() {
 
             if(status=="edit"){
                 if(txtFormStokJual.text.toString().toInt() > txtFormStok.text.toString().toInt()) {
-                    Toast.makeText(activity?.applicationContext, "Pembelian melebihi stok!", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(activity?.applicationContext, "Stok habis!", Toast.LENGTH_SHORT).show()
                     findNavController().navigate(R.id.pembelianFragment)
                 }
                 else{

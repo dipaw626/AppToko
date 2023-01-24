@@ -23,18 +23,6 @@ interface ApiEndpoint {
     @GET("produkbeli")
     fun getProdukbeli(@Header("Authorization") token : String) : Call<ProdukResponse>
 
-//    @FormUrlEncoded
-//    @POST("produkbeli")
-//    fun postProdukBeli(
-//        @Header("Authorization") token : String,
-//        @Field("admin_id") admin_id : Int,
-//        @Field("nama") nama : String,
-//        @Field("harga") harga : Int,
-//        @Field("stok") stok : Int,
-//        @Field("stokjual") stokjual : Int,
-//        @Field("status") status : Int
-//    ) : Call<ProdukResponsePost>
-
     @FormUrlEncoded
     @POST("produktambah")
     fun postProdukTambah(

@@ -563,7 +563,7 @@ class Api_pcs extends REST_Controller
             "nama" => $this->put("nama"),
             "harga" => $this->put("harga"),
             "stok" => $this->put("stok"),
-            "stokjual" => $this->put("stokjual"),
+            "stokjual" => 0,
             "status" => 0
         );
         // $data['status'] = 0;
